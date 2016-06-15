@@ -18,6 +18,7 @@
 		67F55AD31D1005CC006B98FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F55AD21D1005CC006B98FD /* AppDelegate.m */; };
 		67F55ADB1D1005CC006B98FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F55ADA1D1005CC006B98FD /* Assets.xcassets */; };
 		67F55ADE1D1005CC006B98FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F55ADC1D1005CC006B98FD /* LaunchScreen.storyboard */; };
+		67FAB6601D110C3A0000F90E /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FAB65F1D110C3A0000F90E /* MenuCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		67F55ADA1D1005CC006B98FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67F55ADD1D1005CC006B98FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67F55ADF1D1005CC006B98FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67FAB65E1D110C3A0000F90E /* MenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCell.h; sourceTree = "<group>"; };
+		67FAB65F1D110C3A0000F90E /* MenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				670C42851D1108EA000AD858 /* Menu.h */,
 				670C42861D1108EA000AD858 /* Menu.m */,
 				670C42871D1108EA000AD858 /* Menu.storyboard */,
+				67FAB65E1D110C3A0000F90E /* MenuCell.h */,
+				67FAB65F1D110C3A0000F90E /* MenuCell.m */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 			files = (
 				67F55AD31D1005CC006B98FD /* AppDelegate.m in Sources */,
 				670C42801D110818000AD858 /* MFSideMenuContainerViewController.m in Sources */,
+				67FAB6601D110C3A0000F90E /* MenuCell.m in Sources */,
 				670C42881D1108EA000AD858 /* Menu.m in Sources */,
 				670C42811D110818000AD858 /* MFSideMenuShadow.m in Sources */,
 				670C42821D110818000AD858 /* UIViewController+MFSideMenuAdditions.m in Sources */,

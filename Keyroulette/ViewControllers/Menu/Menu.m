@@ -7,6 +7,8 @@
 //
 
 #import "Menu.h"
+#import "MenuCell.h"
+#import "MFSideMenu.h"
 
 @interface Menu ()
 
@@ -23,6 +25,26 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 5;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MenuCell *menuCell = [tableView dequeueReusableCellWithIdentifier:@"MenuCell"];
+    if (menuCell == nil) {
+        menuCell = [[MenuCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MenuCell"];
+    }
+    
+    
+    
+    return menuCell;
+}
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
 
 /*
 #pragma mark - Navigation
