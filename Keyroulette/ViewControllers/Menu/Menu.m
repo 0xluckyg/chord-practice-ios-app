@@ -9,6 +9,7 @@
 #import "Menu.h"
 #import "MenuCell.h"
 #import "MFSideMenu.h"
+#import "PracticeType.h"
 
 @interface Menu ()
 
@@ -19,6 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    rowNum = 5;
+    PracticeType *practiceType = [[PracticeType alloc] initWithIndex:0];
+    self.view.backgroundColor = practiceType.practiceColor;
+
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,7 +33,15 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return rowNum;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    float height = [[UIScreen mainScreen] bounds].size.height;
+    CGSize statusBarSize = [[UIApplication sharedApplication] statusBarFrame].size;
+    CGFloat statusBarHeight = MIN(statusBarSize.width, statusBarSize.height);
+    
+    return (height-statusBarHeight)/rowNum;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -36,12 +50,27 @@
         menuCell = [[MenuCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MenuCell"];
     }
     
+    PracticeType *practiceType = [[PracticeType alloc] initWithIndex:indexPath.row];
     
     
+    menuCell.cellText.text = practiceType.practiceTitle;
+    menuCell.backgroundColor = practiceType.practiceColor;
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    menuCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return menuCell;
 }
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSArray *viewControllerTypes= @[@"Notes", @"Intervals", @"Chords", @"Modes", @"Scales"];
+    
+    UIStoryboard *storyboardInit = [UIStoryboard storyboardWithName:viewControllerTypes[indexPath.row] bundle:[NSBundle mainBundle]];
+    UIViewController *vcInit = [storyboardInit instantiateViewControllerWithIdentifier:viewControllerTypes[indexPath.row]];
+    
+    [self.menuContainerViewController setCenterViewController:vcInit];
+    [self.menuContainerViewController setMenuState:MFSideMenuStateClosed completion:^{}];
+    vcInit = nil;
+    
     
 }
 

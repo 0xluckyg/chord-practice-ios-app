@@ -1,27 +1,27 @@
 //
-//  Notes.m
+//  Chords.m
 //  Keyroulette
 //
-//  Created by Scott Cho on 6/14/16.
+//  Created by Scott Cho on 6/15/16.
 //  Copyright © 2016 Scott Cho. All rights reserved.
 //
 
-#import "Notes.h"
+#import "Chords.h"
 #import "PracticeType.h"
 
-@interface Notes ()
+@interface Chords ()
 
 @end
 
-@implementation Notes
+@implementation Chords
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    PracticeType *notes = [[PracticeType alloc] initWithIndex:0];
+    PracticeType *chords = [[PracticeType alloc] initWithIndex:2];
     
-    self.view.backgroundColor = notes.practiceColor;
+    self.view.backgroundColor = chords.practiceColor;
     
 }
 

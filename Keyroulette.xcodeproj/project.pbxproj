@@ -14,11 +14,21 @@
 		670C42891D1108EA000AD858 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670C42871D1108EA000AD858 /* Menu.storyboard */; };
 		670C428D1D11091F000AD858 /* Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C428C1D11091F000AD858 /* Notes.m */; };
 		670C428F1D110929000AD858 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670C428E1D110929000AD858 /* Notes.storyboard */; };
+		6748CE6E1D11E75C00A05BA6 /* Intervals.m in Sources */ = {isa = PBXBuildFile; fileRef = 6748CE6D1D11E75C00A05BA6 /* Intervals.m */; };
+		6748CE701D11E77400A05BA6 /* Intervals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6748CE6F1D11E77400A05BA6 /* Intervals.storyboard */; };
+		6748CE731D11E7CA00A05BA6 /* Chords.m in Sources */ = {isa = PBXBuildFile; fileRef = 6748CE721D11E7CA00A05BA6 /* Chords.m */; };
+		6748CE751D11E7D500A05BA6 /* Chords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6748CE741D11E7D500A05BA6 /* Chords.storyboard */; };
+		6748CE781D11E7E300A05BA6 /* Modes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6748CE771D11E7E300A05BA6 /* Modes.m */; };
+		6748CE7A1D11E7EB00A05BA6 /* Modes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6748CE791D11E7EB00A05BA6 /* Modes.storyboard */; };
+		6748CE7D1D11E7F900A05BA6 /* Scales.m in Sources */ = {isa = PBXBuildFile; fileRef = 6748CE7C1D11E7F900A05BA6 /* Scales.m */; };
+		6748CE7F1D11E80500A05BA6 /* Scales.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6748CE7E1D11E80500A05BA6 /* Scales.storyboard */; };
 		67F55AD01D1005CC006B98FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F55ACF1D1005CC006B98FD /* main.m */; };
 		67F55AD31D1005CC006B98FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F55AD21D1005CC006B98FD /* AppDelegate.m */; };
 		67F55ADB1D1005CC006B98FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F55ADA1D1005CC006B98FD /* Assets.xcassets */; };
 		67F55ADE1D1005CC006B98FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F55ADC1D1005CC006B98FD /* LaunchScreen.storyboard */; };
 		67FAB6601D110C3A0000F90E /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FAB65F1D110C3A0000F90E /* MenuCell.m */; };
+		67FDC3CB1D11D6D200759182 /* TheoryLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FDC3CA1D11D6D200759182 /* TheoryLibrary.m */; };
+		67FDC3CE1D11E1D000759182 /* PracticeType.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FDC3CD1D11E1D000759182 /* PracticeType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +45,18 @@
 		670C428B1D11091F000AD858 /* Notes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notes.h; sourceTree = "<group>"; };
 		670C428C1D11091F000AD858 /* Notes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notes.m; sourceTree = "<group>"; };
 		670C428E1D110929000AD858 /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
+		6748CE6C1D11E75C00A05BA6 /* Intervals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Intervals.h; sourceTree = "<group>"; };
+		6748CE6D1D11E75C00A05BA6 /* Intervals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Intervals.m; sourceTree = "<group>"; };
+		6748CE6F1D11E77400A05BA6 /* Intervals.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intervals.storyboard; sourceTree = "<group>"; };
+		6748CE711D11E7CA00A05BA6 /* Chords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chords.h; sourceTree = "<group>"; };
+		6748CE721D11E7CA00A05BA6 /* Chords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chords.m; sourceTree = "<group>"; };
+		6748CE741D11E7D500A05BA6 /* Chords.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chords.storyboard; sourceTree = "<group>"; };
+		6748CE761D11E7E300A05BA6 /* Modes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Modes.h; sourceTree = "<group>"; };
+		6748CE771D11E7E300A05BA6 /* Modes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Modes.m; sourceTree = "<group>"; };
+		6748CE791D11E7EB00A05BA6 /* Modes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Modes.storyboard; sourceTree = "<group>"; };
+		6748CE7B1D11E7F900A05BA6 /* Scales.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scales.h; sourceTree = "<group>"; };
+		6748CE7C1D11E7F900A05BA6 /* Scales.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scales.m; sourceTree = "<group>"; };
+		6748CE7E1D11E80500A05BA6 /* Scales.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scales.storyboard; sourceTree = "<group>"; };
 		67F55ACB1D1005CC006B98FD /* Keyroulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keyroulette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F55ACF1D1005CC006B98FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		67F55AD11D1005CC006B98FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,6 +66,10 @@
 		67F55ADF1D1005CC006B98FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67FAB65E1D110C3A0000F90E /* MenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCell.h; sourceTree = "<group>"; };
 		67FAB65F1D110C3A0000F90E /* MenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCell.m; sourceTree = "<group>"; };
+		67FDC3C91D11D6D200759182 /* TheoryLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheoryLibrary.h; sourceTree = "<group>"; };
+		67FDC3CA1D11D6D200759182 /* TheoryLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheoryLibrary.m; sourceTree = "<group>"; };
+		67FDC3CC1D11E1D000759182 /* PracticeType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeType.h; sourceTree = "<group>"; };
+		67FDC3CD1D11E1D000759182 /* PracticeType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeType.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +109,10 @@
 			isa = PBXGroup;
 			children = (
 				670C428A1D11090E000AD858 /* Notes */,
+				6748CE681D11E72B00A05BA6 /* Intervals */,
+				6748CE691D11E73200A05BA6 /* Chords */,
+				6748CE6A1D11E73900A05BA6 /* Modes */,
+				6748CE6B1D11E73F00A05BA6 /* Scales */,
 				670C42841D1108EA000AD858 /* Menu */,
 			);
 			path = ViewControllers;
@@ -110,6 +140,46 @@
 			path = Notes;
 			sourceTree = "<group>";
 		};
+		6748CE681D11E72B00A05BA6 /* Intervals */ = {
+			isa = PBXGroup;
+			children = (
+				6748CE6C1D11E75C00A05BA6 /* Intervals.h */,
+				6748CE6D1D11E75C00A05BA6 /* Intervals.m */,
+				6748CE6F1D11E77400A05BA6 /* Intervals.storyboard */,
+			);
+			path = Intervals;
+			sourceTree = "<group>";
+		};
+		6748CE691D11E73200A05BA6 /* Chords */ = {
+			isa = PBXGroup;
+			children = (
+				6748CE711D11E7CA00A05BA6 /* Chords.h */,
+				6748CE721D11E7CA00A05BA6 /* Chords.m */,
+				6748CE741D11E7D500A05BA6 /* Chords.storyboard */,
+			);
+			path = Chords;
+			sourceTree = "<group>";
+		};
+		6748CE6A1D11E73900A05BA6 /* Modes */ = {
+			isa = PBXGroup;
+			children = (
+				6748CE761D11E7E300A05BA6 /* Modes.h */,
+				6748CE771D11E7E300A05BA6 /* Modes.m */,
+				6748CE791D11E7EB00A05BA6 /* Modes.storyboard */,
+			);
+			path = Modes;
+			sourceTree = "<group>";
+		};
+		6748CE6B1D11E73F00A05BA6 /* Scales */ = {
+			isa = PBXGroup;
+			children = (
+				6748CE7B1D11E7F900A05BA6 /* Scales.h */,
+				6748CE7C1D11E7F900A05BA6 /* Scales.m */,
+				6748CE7E1D11E80500A05BA6 /* Scales.storyboard */,
+			);
+			path = Scales;
+			sourceTree = "<group>";
+		};
 		67F55AC21D1005CC006B98FD = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +201,7 @@
 			children = (
 				670C42831D1108EA000AD858 /* ViewControllers */,
 				670C42771D110818000AD858 /* Lib */,
+				67FDC3C81D11D6B500759182 /* Util */,
 				67F55ACE1D1005CC006B98FD /* Supporting Files */,
 			);
 			path = Keyroulette;
@@ -147,6 +218,17 @@
 				67F55ACF1D1005CC006B98FD /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		67FDC3C81D11D6B500759182 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				67FDC3C91D11D6D200759182 /* TheoryLibrary.h */,
+				67FDC3CA1D11D6D200759182 /* TheoryLibrary.m */,
+				67FDC3CC1D11E1D000759182 /* PracticeType.h */,
+				67FDC3CD1D11E1D000759182 /* PracticeType.m */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +291,10 @@
 				670C428F1D110929000AD858 /* Notes.storyboard in Resources */,
 				670C42891D1108EA000AD858 /* Menu.storyboard in Resources */,
 				67F55ADE1D1005CC006B98FD /* LaunchScreen.storyboard in Resources */,
+				6748CE7F1D11E80500A05BA6 /* Scales.storyboard in Resources */,
+				6748CE751D11E7D500A05BA6 /* Chords.storyboard in Resources */,
+				6748CE7A1D11E7EB00A05BA6 /* Modes.storyboard in Resources */,
+				6748CE701D11E77400A05BA6 /* Intervals.storyboard in Resources */,
 				67F55ADB1D1005CC006B98FD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,13 +306,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6748CE781D11E7E300A05BA6 /* Modes.m in Sources */,
+				6748CE6E1D11E75C00A05BA6 /* Intervals.m in Sources */,
 				67F55AD31D1005CC006B98FD /* AppDelegate.m in Sources */,
+				6748CE731D11E7CA00A05BA6 /* Chords.m in Sources */,
 				670C42801D110818000AD858 /* MFSideMenuContainerViewController.m in Sources */,
+				67FDC3CB1D11D6D200759182 /* TheoryLibrary.m in Sources */,
+				6748CE7D1D11E7F900A05BA6 /* Scales.m in Sources */,
 				67FAB6601D110C3A0000F90E /* MenuCell.m in Sources */,
 				670C42881D1108EA000AD858 /* Menu.m in Sources */,
 				670C42811D110818000AD858 /* MFSideMenuShadow.m in Sources */,
 				670C42821D110818000AD858 /* UIViewController+MFSideMenuAdditions.m in Sources */,
 				670C428D1D11091F000AD858 /* Notes.m in Sources */,
+				67FDC3CE1D11E1D000759182 /* PracticeType.m in Sources */,
 				67F55AD01D1005CC006B98FD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

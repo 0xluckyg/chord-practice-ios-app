@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Menu : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface Menu : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+    NSUInteger rowNum;
+}
 
 @end

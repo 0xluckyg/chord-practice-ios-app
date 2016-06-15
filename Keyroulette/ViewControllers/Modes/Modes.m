@@ -1,27 +1,27 @@
 //
-//  Notes.m
+//  Modes.m
 //  Keyroulette
 //
-//  Created by Scott Cho on 6/14/16.
+//  Created by Scott Cho on 6/15/16.
 //  Copyright © 2016 Scott Cho. All rights reserved.
 //
 
-#import "Notes.h"
+#import "Modes.h"
 #import "PracticeType.h"
 
-@interface Notes ()
+@interface Modes ()
 
 @end
 
-@implementation Notes
+@implementation Modes
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    PracticeType *notes = [[PracticeType alloc] initWithIndex:0];
+    PracticeType *modes = [[PracticeType alloc] initWithIndex:3];
     
-    self.view.backgroundColor = notes.practiceColor;
+    self.view.backgroundColor = modes.practiceColor;
     
 }
 

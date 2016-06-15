@@ -1,5 +1,5 @@
 //
-//  MenuCell.h
+//  Intervals.h
 //  Keyroulette
 //
 //  Created by Scott Cho on 6/15/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MenuCell : UITableViewCell
-
-@property (weak, nonatomic) IBOutlet UILabel *cellText;
+@interface Intervals : UIViewController
 
 @end

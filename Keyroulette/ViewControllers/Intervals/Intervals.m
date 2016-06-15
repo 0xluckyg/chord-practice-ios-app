@@ -1,28 +1,27 @@
 //
-//  Notes.m
+//  Intervals.m
 //  Keyroulette
 //
-//  Created by Scott Cho on 6/14/16.
+//  Created by Scott Cho on 6/15/16.
 //  Copyright © 2016 Scott Cho. All rights reserved.
 //
 
-#import "Notes.h"
+#import "Intervals.h"
 #import "PracticeType.h"
 
-@interface Notes ()
+@interface Intervals ()
 
 @end
 
-@implementation Notes
+@implementation Intervals
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    PracticeType *notes = [[PracticeType alloc] initWithIndex:0];
+    PracticeType *intervals = [[PracticeType alloc] initWithIndex:1];
     
-    self.view.backgroundColor = notes.practiceColor;
-    
+    self.view.backgroundColor = intervals.practiceColor;
 }
 
 - (void)didReceiveMemoryWarning {

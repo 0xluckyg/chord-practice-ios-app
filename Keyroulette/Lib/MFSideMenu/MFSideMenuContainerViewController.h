@@ -53,6 +53,7 @@ typedef enum {
 @property (nonatomic, assign) CGFloat menuWidth;
 @property (nonatomic, assign) CGFloat leftMenuWidth;
 @property (nonatomic, assign) CGFloat rightMenuWidth;
+@property (nonatomic, assign) CGFloat screenWidth;
 
 // shadow
 @property (nonatomic, strong) MFSideMenuShadow *shadow;

@@ -1,28 +1,27 @@
 //
-//  Notes.m
+//  Scales.m
 //  Keyroulette
 //
-//  Created by Scott Cho on 6/14/16.
+//  Created by Scott Cho on 6/15/16.
 //  Copyright © 2016 Scott Cho. All rights reserved.
 //
 
-#import "Notes.h"
+#import "Scales.h"
 #import "PracticeType.h"
 
-@interface Notes ()
+@interface Scales ()
 
 @end
 
-@implementation Notes
+@implementation Scales
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    PracticeType *notes = [[PracticeType alloc] initWithIndex:0];
+    PracticeType *scales = [[PracticeType alloc] initWithIndex:4];
     
-    self.view.backgroundColor = notes.practiceColor;
-    
+    self.view.backgroundColor = scales.practiceColor;
 }
 
 - (void)didReceiveMemoryWarning {
