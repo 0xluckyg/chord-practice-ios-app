@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MFSideMenuContainerViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UIStoryboard *main = [UIStoryboard storyboardWithName:@"Notes" bundle:[NSBundle mainBundle]];
+    UIStoryboard *menu = [UIStoryboard storyboardWithName:@"Menu" bundle:[NSBundle mainBundle]];
+    MFSideMenuContainerViewController *controller = (MFSideMenuContainerViewController *)self.window.rootViewController;
+    
+    UIViewController *mainVc = [main instantiateViewControllerWithIdentifier:@"Notes"];
+    UIViewController *leftVc = [menu instantiateViewControllerWithIdentifier:@"Menu"];
+    
+    [controller setCenterViewController:mainVc];
+    [controller setLeftMenuViewController:leftVc];
+    
+    [controller.shadow setRadius:3.0f];
+    
     return YES;
 }
 

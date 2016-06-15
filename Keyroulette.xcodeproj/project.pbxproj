@@ -7,22 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		670C42801D110818000AD858 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C427B1D110818000AD858 /* MFSideMenuContainerViewController.m */; };
+		670C42811D110818000AD858 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C427D1D110818000AD858 /* MFSideMenuShadow.m */; };
+		670C42821D110818000AD858 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C427F1D110818000AD858 /* UIViewController+MFSideMenuAdditions.m */; };
+		670C42881D1108EA000AD858 /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C42861D1108EA000AD858 /* Menu.m */; };
+		670C42891D1108EA000AD858 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670C42871D1108EA000AD858 /* Menu.storyboard */; };
+		670C428D1D11091F000AD858 /* Notes.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C428C1D11091F000AD858 /* Notes.m */; };
+		670C428F1D110929000AD858 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670C428E1D110929000AD858 /* Notes.storyboard */; };
 		67F55AD01D1005CC006B98FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F55ACF1D1005CC006B98FD /* main.m */; };
 		67F55AD31D1005CC006B98FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F55AD21D1005CC006B98FD /* AppDelegate.m */; };
-		67F55AD61D1005CC006B98FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F55AD51D1005CC006B98FD /* ViewController.m */; };
-		67F55AD91D1005CC006B98FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F55AD71D1005CC006B98FD /* Main.storyboard */; };
 		67F55ADB1D1005CC006B98FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F55ADA1D1005CC006B98FD /* Assets.xcassets */; };
 		67F55ADE1D1005CC006B98FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F55ADC1D1005CC006B98FD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		670C42791D110818000AD858 /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
+		670C427A1D110818000AD858 /* MFSideMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuContainerViewController.h; sourceTree = "<group>"; };
+		670C427B1D110818000AD858 /* MFSideMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuContainerViewController.m; sourceTree = "<group>"; };
+		670C427C1D110818000AD858 /* MFSideMenuShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuShadow.h; sourceTree = "<group>"; };
+		670C427D1D110818000AD858 /* MFSideMenuShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuShadow.m; sourceTree = "<group>"; };
+		670C427E1D110818000AD858 /* UIViewController+MFSideMenuAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MFSideMenuAdditions.h"; sourceTree = "<group>"; };
+		670C427F1D110818000AD858 /* UIViewController+MFSideMenuAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MFSideMenuAdditions.m"; sourceTree = "<group>"; };
+		670C42851D1108EA000AD858 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		670C42861D1108EA000AD858 /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
+		670C42871D1108EA000AD858 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		670C428B1D11091F000AD858 /* Notes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notes.h; sourceTree = "<group>"; };
+		670C428C1D11091F000AD858 /* Notes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notes.m; sourceTree = "<group>"; };
+		670C428E1D110929000AD858 /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		67F55ACB1D1005CC006B98FD /* Keyroulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keyroulette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F55ACF1D1005CC006B98FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		67F55AD11D1005CC006B98FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		67F55AD21D1005CC006B98FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		67F55AD41D1005CC006B98FD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		67F55AD51D1005CC006B98FD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		67F55AD81D1005CC006B98FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67F55ADA1D1005CC006B98FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67F55ADD1D1005CC006B98FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67F55ADF1D1005CC006B98FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +54,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		670C42771D110818000AD858 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				670C42781D110818000AD858 /* MFSideMenu */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		670C42781D110818000AD858 /* MFSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				670C42791D110818000AD858 /* MFSideMenu.h */,
+				670C427A1D110818000AD858 /* MFSideMenuContainerViewController.h */,
+				670C427B1D110818000AD858 /* MFSideMenuContainerViewController.m */,
+				670C427C1D110818000AD858 /* MFSideMenuShadow.h */,
+				670C427D1D110818000AD858 /* MFSideMenuShadow.m */,
+				670C427E1D110818000AD858 /* UIViewController+MFSideMenuAdditions.h */,
+				670C427F1D110818000AD858 /* UIViewController+MFSideMenuAdditions.m */,
+			);
+			path = MFSideMenu;
+			sourceTree = "<group>";
+		};
+		670C42831D1108EA000AD858 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				670C428A1D11090E000AD858 /* Notes */,
+				670C42841D1108EA000AD858 /* Menu */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		670C42841D1108EA000AD858 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				670C42851D1108EA000AD858 /* Menu.h */,
+				670C42861D1108EA000AD858 /* Menu.m */,
+				670C42871D1108EA000AD858 /* Menu.storyboard */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		670C428A1D11090E000AD858 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				670C428B1D11091F000AD858 /* Notes.h */,
+				670C428C1D11091F000AD858 /* Notes.m */,
+				670C428E1D110929000AD858 /* Notes.storyboard */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
 		67F55AC21D1005CC006B98FD = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +124,8 @@
 		67F55ACD1D1005CC006B98FD /* Keyroulette */ = {
 			isa = PBXGroup;
 			children = (
-				67F55AD11D1005CC006B98FD /* AppDelegate.h */,
-				67F55AD21D1005CC006B98FD /* AppDelegate.m */,
-				67F55AD41D1005CC006B98FD /* ViewController.h */,
-				67F55AD51D1005CC006B98FD /* ViewController.m */,
-				67F55AD71D1005CC006B98FD /* Main.storyboard */,
-				67F55ADA1D1005CC006B98FD /* Assets.xcassets */,
-				67F55ADC1D1005CC006B98FD /* LaunchScreen.storyboard */,
-				67F55ADF1D1005CC006B98FD /* Info.plist */,
+				670C42831D1108EA000AD858 /* ViewControllers */,
+				670C42771D110818000AD858 /* Lib */,
 				67F55ACE1D1005CC006B98FD /* Supporting Files */,
 			);
 			path = Keyroulette;
@@ -74,6 +134,11 @@
 		67F55ACE1D1005CC006B98FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				67F55AD11D1005CC006B98FD /* AppDelegate.h */,
+				67F55AD21D1005CC006B98FD /* AppDelegate.m */,
+				67F55ADA1D1005CC006B98FD /* Assets.xcassets */,
+				67F55ADC1D1005CC006B98FD /* LaunchScreen.storyboard */,
+				67F55ADF1D1005CC006B98FD /* Info.plist */,
 				67F55ACF1D1005CC006B98FD /* main.m */,
 			);
 			name = "Supporting Files";
@@ -136,9 +201,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				670C428F1D110929000AD858 /* Notes.storyboard in Resources */,
+				670C42891D1108EA000AD858 /* Menu.storyboard in Resources */,
 				67F55ADE1D1005CC006B98FD /* LaunchScreen.storyboard in Resources */,
 				67F55ADB1D1005CC006B98FD /* Assets.xcassets in Resources */,
-				67F55AD91D1005CC006B98FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,8 +215,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67F55AD61D1005CC006B98FD /* ViewController.m in Sources */,
 				67F55AD31D1005CC006B98FD /* AppDelegate.m in Sources */,
+				670C42801D110818000AD858 /* MFSideMenuContainerViewController.m in Sources */,
+				670C42881D1108EA000AD858 /* Menu.m in Sources */,
+				670C42811D110818000AD858 /* MFSideMenuShadow.m in Sources */,
+				670C42821D110818000AD858 /* UIViewController+MFSideMenuAdditions.m in Sources */,
+				670C428D1D11091F000AD858 /* Notes.m in Sources */,
 				67F55AD01D1005CC006B98FD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,14 +228,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		67F55AD71D1005CC006B98FD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				67F55AD81D1005CC006B98FD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		67F55ADC1D1005CC006B98FD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -300,6 +362,7 @@
 				67F55AE41D1005CC006B98FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

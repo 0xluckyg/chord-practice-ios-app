@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  Menu.h
 //  Keyroulette
 //
 //  Created by Scott Cho on 6/14/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface Menu : UIViewController
 
 @end
-
