@@ -26,7 +26,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9E7-ue-OT6">
                                 <rect key="frame" x="10" y="635" width="91" height="91"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9E7-ue-OT6" secondAttribute="height" multiplier="1:1" id="cAJ-94-vSe"/>
                                 </constraints>
@@ -35,7 +34,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yoj-TZ-tVt">
                                 <rect key="frame" x="111" y="635" width="91" height="91"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Yoj-TZ-tVt" secondAttribute="height" multiplier="1:1" id="EfJ-sL-7RB"/>
                                 </constraints>
@@ -44,27 +42,34 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTX-Yf-ZQm">
                                 <rect key="frame" x="212" y="635" width="91" height="91"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UTX-Yf-ZQm" secondAttribute="height" multiplier="1:1" id="iS1-Ub-F5K"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="SKIP"/>
+                                <connections>
+                                    <action selector="notesSkip:" destination="wcs-Dz-iOS" eventType="touchUpInside" id="yIR-Jd-Or0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bx9-mB-xFf">
                                 <rect key="frame" x="313" y="635" width="91" height="91"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bx9-mB-xFf" secondAttribute="height" multiplier="1:1" id="C6W-NB-AwF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="STOP"/>
+                                <connections>
+                                    <action selector="notesPausePlay:" destination="wcs-Dz-iOS" eventType="touchUpInside" id="ngZ-cy-Eff"/>
+                                </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="dBm-WF-q59">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="dBm-WF-q59">
                                 <rect key="frame" x="-2" y="595" width="418" height="31"/>
                                 <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="notesSliderAction:" destination="wcs-Dz-iOS" eventType="valueChanged" id="IXZ-dM-uPZ"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="la0-VQ-Off">
                                 <rect key="frame" x="14" y="40" width="59" height="44"/>
@@ -72,9 +77,11 @@
                                 <state key="normal" title="Location">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="notePageIndicator:" destination="wcs-Dz-iOS" eventType="touchUpInside" id="yzT-Li-a69"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bx9-mB-xFf" firstAttribute="height" secondItem="9E7-ue-OT6" secondAttribute="height" id="0Hm-4B-d1j"/>
                             <constraint firstItem="la0-VQ-Off" firstAttribute="leading" secondItem="AY3-fK-mBa" secondAttribute="leading" constant="20" id="0s5-LU-KKr"/>
@@ -87,8 +94,10 @@
                             <constraint firstItem="v4F-aP-zf3" firstAttribute="top" secondItem="Yoj-TZ-tVt" secondAttribute="bottom" constant="10" id="UDe-mV-Ngg"/>
                             <constraint firstItem="UTX-Yf-ZQm" firstAttribute="width" secondItem="9E7-ue-OT6" secondAttribute="width" id="Zqa-wi-Hla"/>
                             <constraint firstItem="la0-VQ-Off" firstAttribute="top" secondItem="bzw-iu-ccX" secondAttribute="bottom" constant="20" id="bfa-Vg-RDe"/>
+                            <constraint firstItem="4Q9-Kd-jzD" firstAttribute="leading" secondItem="AY3-fK-mBa" secondAttribute="leading" constant="57" id="d5D-rg-T9P"/>
                             <constraint firstItem="v4F-aP-zf3" firstAttribute="top" secondItem="9E7-ue-OT6" secondAttribute="bottom" constant="10" id="efe-Ds-1tH"/>
                             <constraint firstItem="Yoj-TZ-tVt" firstAttribute="width" secondItem="9E7-ue-OT6" secondAttribute="width" id="erF-g1-7RY"/>
+                            <constraint firstAttribute="trailing" secondItem="4Q9-Kd-jzD" secondAttribute="trailing" constant="57" id="hYn-T8-AKP"/>
                             <constraint firstItem="UTX-Yf-ZQm" firstAttribute="height" secondItem="9E7-ue-OT6" secondAttribute="height" id="iK0-TQ-79j"/>
                             <constraint firstItem="4Q9-Kd-jzD" firstAttribute="centerX" secondItem="AY3-fK-mBa" secondAttribute="centerX" id="lTb-ev-HwU"/>
                             <constraint firstAttribute="trailing" secondItem="dBm-WF-q59" secondAttribute="trailing" id="li1-a4-Iw5"/>
@@ -101,6 +110,15 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="noteMainLabel" destination="4Q9-Kd-jzD" id="yVh-NV-22Y"/>
+                        <outlet property="notePageIndicatorText" destination="la0-VQ-Off" id="2Db-Xe-ru1"/>
+                        <outlet property="notesPausePlayLabel" destination="bx9-mB-xFf" id="5lL-eh-Cit"/>
+                        <outlet property="notesSkipLabel" destination="UTX-Yf-ZQm" id="hvK-LE-UdZ"/>
+                        <outlet property="notesSlider" destination="dBm-WF-q59" id="KjY-iX-tiV"/>
+                        <outlet property="notesSpeedIndicate" destination="9E7-ue-OT6" id="6WW-LX-Z52"/>
+                        <outlet property="notesTimer" destination="Yoj-TZ-tVt" id="Rll-YE-Fpl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NM0-2X-UZy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

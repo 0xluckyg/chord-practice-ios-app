@@ -13,8 +13,10 @@
 
 @property (strong, nonatomic) NSString *practiceTitle;
 @property (strong, nonatomic) UIColor *practiceColor;
-@property (strong, nonatomic) UIColor *practiceContent;
+@property (strong, nonatomic) NSArray *practiceContent;
 
 - (instancetype)initWithIndex:(NSUInteger)index;
+
+- (NSString*) randomNotes;
 
 @end

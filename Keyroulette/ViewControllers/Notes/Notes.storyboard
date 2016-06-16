@@ -26,7 +26,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0e-gI-UHT">
                                 <rect key="frame" x="10" y="635" width="91" height="91"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Y0e-gI-UHT" secondAttribute="height" multiplier="1:1" id="TSe-di-Tpy"/>
                                 </constraints>
@@ -35,7 +34,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcZ-wK-Dom">
                                 <rect key="frame" x="111" y="635" width="91" height="91"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XcZ-wK-Dom" secondAttribute="height" multiplier="1:1" id="VzV-v3-A0D"/>
                                 </constraints>
@@ -44,27 +42,34 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZL-Bv-Egm">
                                 <rect key="frame" x="212" y="635" width="91" height="91"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LZL-Bv-Egm" secondAttribute="height" multiplier="1:1" id="dhD-IU-QY3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="SKIP"/>
+                                <connections>
+                                    <action selector="notesSkip:" destination="w7V-jN-raS" eventType="touchUpInside" id="Jyj-c4-kuW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbR-vf-dCI">
                                 <rect key="frame" x="313" y="635" width="91" height="91"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GbR-vf-dCI" secondAttribute="height" multiplier="1:1" id="45W-TM-oG3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="STOP"/>
+                                <connections>
+                                    <action selector="notesPausePlay:" destination="w7V-jN-raS" eventType="touchUpInside" id="SeP-r7-bud"/>
+                                </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="1aa-sV-YT3">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="1aa-sV-YT3">
                                 <rect key="frame" x="-2" y="595" width="418" height="31"/>
                                 <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="notesSliderAction:" destination="w7V-jN-raS" eventType="valueChanged" id="afN-24-O3a"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jS-ZQ-Lj0">
                                 <rect key="frame" x="14" y="40" width="59" height="44"/>
@@ -72,9 +77,11 @@
                                 <state key="normal" title="Location">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="notePageIndicator:" destination="w7V-jN-raS" eventType="touchUpInside" id="Ne8-He-enr"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Y0e-gI-UHT" firstAttribute="leading" secondItem="X0v-J8-fGc" secondAttribute="leading" constant="10" id="1bL-xo-4Gi"/>
                             <constraint firstItem="GbR-vf-dCI" firstAttribute="height" secondItem="Y0e-gI-UHT" secondAttribute="height" id="3wH-XU-ayS"/>
@@ -101,6 +108,15 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="noteMainLabel" destination="AWP-y5-BHq" id="OTB-7X-iNM"/>
+                        <outlet property="notePageIndicatorText" destination="8jS-ZQ-Lj0" id="Sf8-3c-Uop"/>
+                        <outlet property="notesPausePlayLabel" destination="GbR-vf-dCI" id="cPd-zd-yce"/>
+                        <outlet property="notesSkipLabel" destination="LZL-Bv-Egm" id="kmB-F3-Odv"/>
+                        <outlet property="notesSlider" destination="1aa-sV-YT3" id="6NF-ET-o3z"/>
+                        <outlet property="notesSpeedIndicate" destination="Y0e-gI-UHT" id="ld9-nl-Cel"/>
+                        <outlet property="notesTimer" destination="XcZ-wK-Dom" id="XAo-MG-GSa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwu-8m-ELg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

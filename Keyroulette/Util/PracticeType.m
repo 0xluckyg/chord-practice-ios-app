@@ -42,4 +42,22 @@
     return returnColor;
 }
 
+-(NSString*) randomNotes {
+    
+    NSString *noteSequence = @"";
+    
+    for (int i = 0; i < [self.practiceContent count]; i ++) {
+        
+        NSString *temporaryNote = [self.practiceContent[i][(int)arc4random_uniform([self.practiceContent[i] count])]
+                                   stringByAppendingString:@" "
+                                   ];
+        
+        
+        noteSequence = [noteSequence stringByAppendingString:temporaryNote];
+        
+    }
+    return noteSequence;
+}
+
+
 @end
