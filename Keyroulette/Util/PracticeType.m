@@ -48,9 +48,26 @@
     
     for (int i = 0; i < [self.practiceContent count]; i ++) {
         
-        NSString *temporaryNote = [self.practiceContent[i][(int)arc4random_uniform([self.practiceContent[i] count])]
-                                   stringByAppendingString:@" "
-                                   ];
+        
+        
+        NSString *temporaryNote = self.practiceContent[i][(int)arc4random_uniform([self.practiceContent[i] count])];
+        
+        if (![temporaryNote isEqualToString:@""]) {
+            temporaryNote = [temporaryNote stringByAppendingString:@" "];
+        }
+        
+            //This is for Scale
+        if ([temporaryNote  isEqual: @"Chromatic "] ||
+            //This if for chords
+            [temporaryNote isEqual: @"9 "] ||
+            //This is for intervals
+            [temporaryNote isEqual: @"Halfstep "] ||
+            [temporaryNote isEqual: @"Wholestep "] ||
+            [temporaryNote isEqual: @"Tritone "]) {
+            
+            noteSequence = [noteSequence stringByAppendingString:temporaryNote];
+            break;
+        }
         
         
         noteSequence = [noteSequence stringByAppendingString:temporaryNote];

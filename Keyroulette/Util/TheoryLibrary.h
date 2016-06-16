@@ -19,9 +19,19 @@ extern NSString *const kNotes;
 @property (strong, nonatomic) NSArray *majorMinorArray;
 @property (strong, nonatomic) NSArray *upDownArray;
 @property (strong, nonatomic) NSArray *modeArray;
+
+@property (strong, nonatomic) NSArray *intervalHalfWhole;
 @property (strong, nonatomic) NSArray *intervalArray;
+
 @property (strong, nonatomic) NSArray *scaleMajorMinorArray;
 @property (strong, nonatomic) NSArray *scaleArray;
+@property (strong, nonatomic) NSArray *scaleChromatic;
+
+@property (strong, nonatomic) NSArray *chordMajMinAugDomDimSus;
+@property (strong, nonatomic) NSArray *chord79;
+@property (strong, nonatomic) NSArray *chordAdd;
+@property (strong, nonatomic) NSArray *chordInversion;
+
 
 @property (strong, nonatomic) NSDictionary *yellowColor;
 @property (strong, nonatomic) NSDictionary *tealColor;

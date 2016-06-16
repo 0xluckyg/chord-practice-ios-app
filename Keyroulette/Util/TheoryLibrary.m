@@ -23,18 +23,33 @@ NSString *const kNotes = @"notes";
         
         _keyArray = @[@"C", @"D", @"E", @"F", @"G", @"A", @"B"];
         _sharpFlatArray = @[@"#", @"b", @""];
-        _upDownArray = @[@"Up", @"Down"];
         _majorMinorArray = @[@"Minor", @"Major"];
+        
+        //Specificallyl for intervals
+        _upDownArray = @[@"Up", @"Down"];
+        _intervalHalfWhole = @[ @"Halfstep", @"Wholestep", @"Tritone", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @""];
         _intervalArray = @[@"2nd", @"2nd",
                                @"3rd", @"3rd",
                                @"4th", @"4th",
                                @"5th", @"5th", @"5th",
                                @"6th", @"6th",
-                               @"7th", @"7th",
-                               @"Halfstep", @"Wholestep", @"Tritone"];
+                               @"7th", @"7th",];
+        
+        //Specifically for chords
+        _chordMajMinAugDomDimSus = @[@"M", @"M", @"M", @"m", @"m", @"Aug", @"Dom", @"Dim", @"Sus"];
+        _chord79 = @[@"7", @"7", @"7", @"9", @"", @""];
+        _chordAdd = @[@"Add 9", @"Add 11", @"Add 13", @"", @"", @""];
+        _chordInversion = @[@"1st Inversion", @"2nd Inversion", @"3rd Inversion", @"", @"", @"", @"", @"", @"", @"", @"", @""];
+        
+        //Specifically for mode
         _modeArray = @[@"Ionian", @"Dorian", @"Phrygian", @"Lydian", @"Mixolydian", @"Aeolian", @"Locrian"];
+        
+        //Specifically for scale
+        _scaleChromatic = @[@"Chromatic", @"", @"", @"", @"", @"", @"", @""];
         _scaleMajorMinorArray = @[@"Major", @"Major", @"Major", @"Major", @"Harmonic Minor", @"Minor", @"Minor", @"Minor"];
         _scaleArray = @[@"Arppeggio", @"Pentatonic", @"", @"", @"", @""];
+        
+        
         
         _redColor = @{@"red": @223, @"green": @86, @"blue": @94};
         _yellowColor = @{@"red": @222, @"green": @171, @"blue": @66, @"alpha": @1.0};
@@ -55,6 +70,7 @@ NSString *const kNotes = @"notes";
                         kTitle:@"Intervals",
                         kColor:_tealColor,
                         kNotes:@[_upDownArray,
+                                 _intervalHalfWhole,
                                  _majorMinorArray,
                                  _intervalArray]
                         },
@@ -63,7 +79,11 @@ NSString *const kNotes = @"notes";
                         kTitle:@"Chords",
                         kColor:_yellowColor,
                         kNotes:@[_keyArray,
-                                 @[@"#", @"b", @""]]
+                                 _sharpFlatArray,
+                                 _chordMajMinAugDomDimSus,
+                                 _chord79,
+                                 _chordAdd,
+                                 _chordInversion]
                         },
                       
                       @{
@@ -79,6 +99,7 @@ NSString *const kNotes = @"notes";
                         kColor:_greenColor,
                         kNotes:@[_keyArray,
                                 _sharpFlatArray,
+                                 _scaleChromatic,
                                 _scaleMajorMinorArray,
                                 _scaleArray]
                         },
