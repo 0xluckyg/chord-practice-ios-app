@@ -20,6 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     UIStoryboard *main = [UIStoryboard storyboardWithName:@"Notes" bundle:[NSBundle mainBundle]];
     UIStoryboard *menu = [UIStoryboard storyboardWithName:@"Menu" bundle:[NSBundle mainBundle]];
     MFSideMenuContainerViewController *controller = (MFSideMenuContainerViewController *)self.window.rootViewController;
