@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    rowNum = 5;
+    rowNum = 6;
     PracticeType *practiceType = [[PracticeType alloc] initWithIndex:0];
     self.view.backgroundColor = practiceType.practiceColor;
 
@@ -62,7 +62,7 @@
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSArray *viewControllerTypes= @[@"Notes", @"Intervals", @"Chords", @"Modes", @"Scales"];
+    NSArray *viewControllerTypes= @[@"Notes", @"Intervals", @"Chords", @"Modes", @"Scales", @"Pitches"];
     
     UIStoryboard *storyboardInit = [UIStoryboard storyboardWithName:viewControllerTypes[indexPath.row] bundle:[NSBundle mainBundle]];
     UIViewController *vcInit = [storyboardInit instantiateViewControllerWithIdentifier:viewControllerTypes[indexPath.row]];
@@ -73,16 +73,5 @@
     
     
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -49,15 +49,15 @@ NSString *const kNotes = @"notes";
         _scaleMajorMinorArray = @[@"Major", @"Major", @"Major", @"Major", @"Harmonic Minor", @"Minor", @"Minor", @"Minor"];
         _scaleArray = @[@"Arppeggio", @"Pentatonic", @"", @"", @"", @""];
         
-        
+        //Specifically for pitch
+        _pitchArray = @[@"C", @"C#", @"D", @"D#", @"E", @"F", @"F#", @"G", @"G#", @"A", @"A#", @"B"];
         
         _redColor = @{@"red": @223, @"green": @86, @"blue": @94};
         _yellowColor = @{@"red": @222, @"green": @171, @"blue": @66, @"alpha": @1.0};
         _tealColor = @{@"red": @90, @"green": @187, @"blue": @181, @"alpha": @1.0};
         _purpleColor = @{@"red": @105, @"green": @94, @"blue": @133, @"alpha": @1.0};
         _greenColor = @{@"red": @85, @"green": @176, @"blue": @112, @"alpha": @1.0};
-
-        
+        _orangeColor = @{@"red": @239, @"green": @130, @"blue": @100, @"alpha": @1.0};
         
         _resource = @[@{
                         kTitle:@"Notes",
@@ -104,6 +104,11 @@ NSString *const kNotes = @"notes";
                                 _scaleArray]
                         },
                       
+                      @{
+                        kTitle:@"Pitches",
+                        kColor:_orangeColor,
+                        kNotes:@[_pitchArray]
+                        },
                       
                       ];
     }

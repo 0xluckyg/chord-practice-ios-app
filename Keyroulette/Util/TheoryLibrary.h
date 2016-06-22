@@ -32,12 +32,16 @@ extern NSString *const kNotes;
 @property (strong, nonatomic) NSArray *chordAdd;
 @property (strong, nonatomic) NSArray *chordInversion;
 
+@property (strong, nonatomic) NSArray *pitchArray;
+
 
 @property (strong, nonatomic) NSDictionary *yellowColor;
 @property (strong, nonatomic) NSDictionary *tealColor;
 @property (strong, nonatomic) NSDictionary *redColor;
 @property (strong, nonatomic) NSDictionary *greenColor;
 @property (strong, nonatomic) NSDictionary *purpleColor;
+@property (strong, nonatomic) NSDictionary *orangeColor;
+
 
 @property (strong, nonatomic) NSArray *resource;
 
