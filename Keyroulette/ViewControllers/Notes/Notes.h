@@ -19,7 +19,6 @@
 
 @property (strong, nonatomic) PracticeType *notes;
 
-
 @property (weak, nonatomic) IBOutlet UIButton *notePageIndicatorText;
 
 @property (weak, nonatomic) IBOutlet UILabel *noteMainLabel;

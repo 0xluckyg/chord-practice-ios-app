@@ -17,16 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="RJt-fE-9Dh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="RJt-fE-9Dh">
                                 <rect key="frame" x="56" y="217" width="302" height="302"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="RJt-fE-9Dh" secondAttribute="trailing" constant="56" id="GEM-B1-Dnq"/>
-                            <constraint firstItem="RJt-fE-9Dh" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="56" id="Tkq-gq-wvH"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="RJt-fE-9Dh" secondAttribute="bottom" constant="217" id="lRh-Ni-PdC"/>
-                            <constraint firstItem="RJt-fE-9Dh" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="197" id="qWk-Lr-0zl"/>
+                            <constraint firstItem="RJt-fE-9Dh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="48M-cn-vdf"/>
+                            <constraint firstItem="RJt-fE-9Dh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="flN-TH-0XU"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>

@@ -55,9 +55,8 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="1ad-qN-A7l" secondAttribute="bottom" constant="44.5" id="Q1W-RV-H8a"/>
                                                 <constraint firstItem="1ad-qN-A7l" firstAttribute="leading" secondItem="2Ql-7C-KkN" secondAttribute="leading" constant="44" id="SKy-wU-uL3"/>
-                                                <constraint firstItem="1ad-qN-A7l" firstAttribute="top" secondItem="2Ql-7C-KkN" secondAttribute="top" constant="44" id="wrm-3W-blO"/>
+                                                <constraint firstItem="1ad-qN-A7l" firstAttribute="centerY" secondItem="2Ql-7C-KkN" secondAttribute="centerY" id="wl4-bD-aMN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

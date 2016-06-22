@@ -14,6 +14,9 @@
     [super awakeFromNib];
     // Initialization code
     
+    [self.cellText sizeToFit];
+
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
