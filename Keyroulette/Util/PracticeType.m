@@ -50,7 +50,7 @@
         
         
         
-        NSString *temporaryNote = self.practiceContent[i][(int)arc4random_uniform([self.practiceContent[i] count])];
+        NSString *temporaryNote = self.practiceContent[i][(int)arc4random_uniform((int)[self.practiceContent[i] count])];
         
         if (![temporaryNote isEqualToString:@""]) {
             temporaryNote = [temporaryNote stringByAppendingString:@" "];

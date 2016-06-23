@@ -20,7 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     [self initializeDesign];
     
@@ -31,23 +30,30 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [timer invalidate];
-    if(audioPlayer || audioPlayer.isPlaying) {
-        [audioPlayer stop];
-        audioPlayer = Nil;
-    }
+    [self stopNotes:numberOfNotes];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    [self stopNotes:numberOfNotes];
+}
 
 -(void)initializeFunction {
+    
+    numberOfNotes = 1;
+    numberOfNotesSave = numberOfNotes;
+    
+    self.numberOfNotesLabel.text = [NSString stringWithFormat:@"%@: %i", @"Number of notes: ", numberOfNotes];
+    
+    self.audioArray = [[NSMutableArray alloc] initWithObjects: audioPlayer, audioPlayer2, audioPlayer3, audioPlayer4, audioPlayer5, nil];
+    
     startTimer = true;
     
     time = self.notesSlider.value + 0.1;
     
     timer = [NSTimer scheduledTimerWithTimeInterval: 0.1 target:self selector:@selector(onTick) userInfo:nil repeats:YES];
     
-    audioPlayer = Nil;
-    [self getRandomNote];
-    [audioPlayer play];
+    [self playNotesReset:numberOfNotes];
     
 }
 
@@ -84,11 +90,6 @@
     self.notesReplayUIView.layer.borderWidth = 2.0f;
     self.notesReplayUIView.layer.cornerRadius = self.notesReplayUIView.bounds.size.width/2;
     self.notesReplayUIView.layer.masksToBounds = YES;
-    self.notesAnswerUIView.backgroundColor = [UIColor clearColor];
-    self.notesAnswerUIView.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.notesAnswerUIView.layer.borderWidth = 2.0f;
-    self.notesAnswerUIView.layer.cornerRadius = self.notesReplayUIView.bounds.size.width/2;
-    self.notesAnswerUIView.layer.masksToBounds = YES;
 }
 
 -(void)onTick {
@@ -97,32 +98,62 @@
     
     if (time < 0.1) {
         time = self.notesSlider.value;
-        [self getRandomNote];
-        [audioPlayer play];
+        [self playNotesReset:numberOfNotes];
         
         [self.answerLabel setTitle:@"ANSWER" forState:UIControlStateNormal];
+        
+        numberOfNotesSave = numberOfNotes;
         
     }
 }
 
--(void)getRandomNote {
+-(void)getRandomNote:(int)times {
     
-    [audioPlayer stop];
-    audioPlayer = Nil;
+    [self.noteArray removeAllObjects];
+    self.noteArray = [[NSMutableArray alloc] init];
     
-    self.randomNote =[[self.notes randomNotes]
-                           stringByReplacingOccurrencesOfString:@" " withString:@""];
-    NSString *fileName = [NSString stringWithFormat:@"%@.%@", self.randomNote, @"mp3"];
-    NSString *path = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath],fileName];
-    NSURL *soundURL = [NSURL fileURLWithPath:path];
-
-    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
-    audioPlayer.volume = 1.0;
+    for (int i = 0; i < times; i ++) {
+        
+        self.randomNote =[[self.notes randomNotes]
+                          stringByReplacingOccurrencesOfString:@" " withString:@""];
+        
+        //Makes sure notes don't repeat
+        while ([self.noteArray containsObject:self.randomNote]) {
+            self.randomNote =[[self.notes randomNotes]
+                              stringByReplacingOccurrencesOfString:@" " withString:@""];
+        }
+        
+        [self.noteArray addObject:self.randomNote];
+        
+        NSString *fileName = [NSString stringWithFormat:@"%@.%@", self.randomNote, @"mp3"];
+        NSString *path = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath],fileName];
+        NSURL *soundURL = [NSURL fileURLWithPath:path];
+        
+        self.audioArray[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+        
+        ((AVAudioPlayer*)self.audioArray[i]).volume = 1.0;
+        
+    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)playNotes:(int)times {
+    for (int i = 0; i < times; i++) {
+        [((AVAudioPlayer*)self.audioArray[i]) play];
+    }
+}
+
+-(void)playNotesReset:(int)times {
+    
+    [self getRandomNote: times];
+    for (int i = 0; i < times; i++) {
+        [((AVAudioPlayer*)self.audioArray[i]) play];
+    }
+}
+
+-(void)stopNotes:(int)times {
+    for (int i = 0; i < times; i++) {
+        [((AVAudioPlayer*)self.audioArray[i]) stop];
+    }
 }
 
 - (IBAction)notesSkip:(id)sender {
@@ -130,9 +161,9 @@
     
     [self.answerLabel setTitle:@"ANSWER" forState:UIControlStateNormal];
 
-    audioPlayer = Nil;
-    [self getRandomNote];
-    [audioPlayer play];
+    [self playNotesReset:numberOfNotes];
+    
+    numberOfNotesSave = numberOfNotes;
 }
 
 - (IBAction)notesPausePlay:(id)sender {
@@ -152,20 +183,45 @@
     self.notesSpeedIndicate.text =  [NSString stringWithFormat:@"%.00f", self.notesSlider.value];
 }
 
+- (IBAction)notesNumberOfNotesSliderAction:(id)sender {
+    numberOfNotes = (int)(self.notesNumberOfNotesSlider.value);
+    self.numberOfNotesLabel.text = [NSString stringWithFormat:@"%@: %i", @"Number of notes: ", numberOfNotes];
+}
+
 - (IBAction)notesReplayButton:(id)sender {
     
-    [audioPlayer stop];
-    [audioPlayer play];
+    [self playNotes:numberOfNotesSave];
 }
 
 - (IBAction)notesAnswerButton:(id)sender {
-    [self.answerLabel setTitle:self.randomNote forState:UIControlStateNormal];
+    
+    NSString *answerString = @"";
+    
+    for (int i = 0; i < numberOfNotesSave; i ++) {
+        answerString = [NSString stringWithFormat:@"%@ %@", answerString, self.noteArray[i]];
+    }
+    
+    [self.answerLabel setTitle:answerString forState:UIControlStateNormal];
 }
 
 - (IBAction)notePageIndicator:(id)sender {
     [self.menuContainerViewController toggleLeftSideMenuCompletion:nil];
 }
 
-
-
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

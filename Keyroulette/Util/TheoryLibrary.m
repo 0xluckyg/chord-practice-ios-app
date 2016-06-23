@@ -50,7 +50,7 @@ NSString *const kNotes = @"notes";
         _scaleArray = @[@"Arppeggio", @"Pentatonic", @"", @"", @"", @""];
         
         //Specifically for pitch
-        _pitchArray = @[@"C", @"C#", @"D", @"D#", @"E", @"F", @"F#", @"G", @"G#", @"A", @"A#", @"B"];
+        _pitchArray = @[@"C", @"C#", @"D", @"D#", @"E", @"F", @"F#", @"G", @"G#", @"A", @"A#", @"B", @"CHigh", @"C#High", @"DHigh", @"D#High", @"EHigh", @"FHigh", @"F#High", @"GHigh", @"G#High", @"AHigh", @"A#High", @"BHigh"];
         
         _redColor = @{@"red": @223, @"green": @86, @"blue": @94};
         _yellowColor = @{@"red": @222, @"green": @171, @"blue": @66, @"alpha": @1.0};

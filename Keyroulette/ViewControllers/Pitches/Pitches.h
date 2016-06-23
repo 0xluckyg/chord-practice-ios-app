@@ -12,13 +12,22 @@
 
 @interface Pitches : UIViewController {
 
+int numberOfNotesSave;
+int numberOfNotes;
+    
 NSTimer * timer;
 CGFloat time;
 bool startTimer;
 AVAudioPlayer *audioPlayer;
-    
+AVAudioPlayer *audioPlayer2;
+AVAudioPlayer *audioPlayer3;
+AVAudioPlayer *audioPlayer4;
+AVAudioPlayer *audioPlayer5;
+
 }
 
+@property (strong, nonatomic) NSMutableArray *noteArray;
+@property (strong, nonatomic) NSMutableArray *audioArray;
 
 @property (strong, nonatomic) PracticeType *notes;
 @property (strong, nonatomic) NSString *randomNote;
@@ -26,6 +35,10 @@ AVAudioPlayer *audioPlayer;
 @property (weak, nonatomic) IBOutlet UIButton *notePageIndicatorText;
 
 @property (weak, nonatomic) IBOutlet UISlider *notesSlider;
+
+@property (weak, nonatomic) IBOutlet UISlider *notesNumberOfNotesSlider;
+
+@property (weak, nonatomic) IBOutlet UILabel *numberOfNotesLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *notesSpeedIndicate;
 
@@ -37,9 +50,9 @@ AVAudioPlayer *audioPlayer;
 
 @property (weak, nonatomic) IBOutlet UIView *notesReplayUIView;
 
-@property (weak, nonatomic) IBOutlet UIView *notesAnswerUIView;
-
 @property (weak, nonatomic) IBOutlet UIButton *answerLabel;
+
+
 
 - (IBAction)notesReplayButton:(id)sender;
 
@@ -52,6 +65,8 @@ AVAudioPlayer *audioPlayer;
 - (IBAction)notesPausePlay:(id)sender;
 
 - (IBAction)notesSliderAction:(id)sender;
+
+- (IBAction)notesNumberOfNotesSliderAction:(id)sender;
 
 
 
